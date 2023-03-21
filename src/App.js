@@ -1,12 +1,19 @@
 import "./App.css";
-import NavBar from "./navbar";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/index.js";
+import Profile from "./pages/Profile/index.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">acxz</header>
-      <NavBar />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Profile" element={<Profile />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
