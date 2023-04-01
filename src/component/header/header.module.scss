@@ -31,6 +31,7 @@
   align-items: center;
 
   .boxsearch {
+    position: relative;
     display: flex;
     align-items: center;
     height: 40px;
@@ -55,5 +56,92 @@
     .inputsearch:focus {
       outline: none;
     }
+    &:focus-within {
+      background-color: rgb(158, 48, 48);
+    }
+    .searchbox {
+      position: absolute;
+      left: -228px;
+      top: 44px;
+
+      min-height: 300px;
+      width: 440px;
+      background-color: rgb(158, 48, 48);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      h3 {
+        color: white;
+        font-size: 16px;
+        padding: 12px 18px;
+      }
+    }
+    .searchbox::before {
+      content: "";
+      display: block;
+      top: -18px;
+      position: absolute;
+      height: 20px;
+      width: 10px;
+      background-color: rgb(158, 48, 48);
+    }
+    .searchbox::after {
+      content: "";
+      right: 0;
+      display: block;
+      top: -18px;
+      position: absolute;
+      height: 20px;
+      width: 10px;
+      background-color: rgb(158, 48, 48);
+    }
   }
+}
+.boxsign {
+  display: flex;
+  align-items: center;
+  .gem,
+  .setting {
+    background-color: rgb(116, 60, 60);
+    color: rgb(195, 194, 194);
+    padding: 8px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 12px;
+  }
+  .gem:hover,
+  .setting:hover {
+    opacity: 0.8;
+  }
+}
+.dowload {
+  display: flex;
+  align-items: center;
+  background-color: rgb(116, 60, 60);
+  margin-right: 12px;
+  padding: 10px 18px;
+  color: rgb(255, 50, 50);
+  border-radius: 20px;
+
+  cursor: pointer;
+  h3 {
+    margin-left: 8px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+.dowload:hover,
+.sign:hover {
+  opacity: 0.8;
+}
+.sign {
+  display: flex;
+  align-items: center;
+  background-color: rgb(192, 58, 58);
+  margin-right: 12px;
+  padding: 10px 22px;
+  color: white;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
 }
