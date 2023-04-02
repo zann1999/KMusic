@@ -61,7 +61,7 @@ function Header() {
 
         <Tippy
           render={(attrs) => (
-            <div className="box" tabIndex="-1" {...attrs}>
+            <div className={cx("boxtippy")} tabIndex="-1" {...attrs}>
               Nâng cấp vip
             </div>
           )}
@@ -72,7 +72,7 @@ function Header() {
         </Tippy>
         <Tippy
           render={(attrs) => (
-            <div className="box" tabIndex="-1" {...attrs}>
+            <div className={cx("boxtippy")} tabIndex="-1" {...attrs}>
               Cài đặt
             </div>
           )}

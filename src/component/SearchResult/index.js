@@ -9,13 +9,13 @@ const cx = classNames.bind(styles);
 
 function SearchResult() {
   return (
-    <>
+    <div className={cx("SearchResult")}>
       <UserSearch />
       <UserSearch />
       <UserSearch />
       <UserSearch />
       <UserSearch />
-    </>
+    </div>
   );
 }
 

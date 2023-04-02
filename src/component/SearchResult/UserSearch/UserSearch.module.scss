@@ -1,7 +1,158 @@
 .user {
-  padding: 12px 18px;
+  padding: 12px 12px;
   display: flex;
+  align-items: center;
+  margin-left: 12px;
+  margin-right: 12px;
+  border-radius: 6px;
+  position: relative;
+  &:last-child {
+    margin-bottom: 12px;
+  }
+
   img {
     width: 52px;
+    border-radius: 4px;
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  h4 {
+    margin-left: 12px;
+    padding: 0px 4px 2px 2px;
+    color: #32323d;
+    font-weight: 600;
+    &:hover {
+      color: #0e8080;
+      cursor: pointer;
+    }
+  }
+  h5 {
+    margin-left: 12px;
+    color: #797979;
+    font-weight: 400;
+  }
+  .option {
+    display: none;
+    position: absolute;
+    right: 24px;
+    border: none;
+
+    color: #32323d;
+
+    & :first-child,
+    :last-child {
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 50%;
+      &:hover {
+        background-color: #0e8080;
+        color: white;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+.user:hover {
+  background-color: #e9f1f1;
+  cursor: pointer;
+  & .option {
+    display: block;
+  }
+  &::before {
+    display: block;
+  }
+  &::after {
+    display: block;
+  }
+}
+
+.user::before {
+  content: "";
+  position: absolute;
+  display: none;
+  height: 52px;
+  width: 52px;
+  background-color: rgba(74, 73, 73, 0.281);
+}
+.user::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 30px;
+  border: 20px solid white;
+  border-width: 10px 16px;
+  border-color: transparent transparent transparent rgb(255, 255, 255);
+}
+.boxtippy {
+  height: 24px;
+  color: white;
+  background-color: rgb(61, 61, 61);
+  padding: 0 8px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+.cl {
+  background-color: transparent;
+  width: 240px;
+  img {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  & .option {
+    display: block;
+  }
+  &::before {
+    display: none;
+  }
+  &::after {
+    display: none;
+  }
+  h4 {
+    color: black;
+  }
+  h4:hover {
+    color: black;
+  }
+  h5 {
+    color: rgb(66, 66, 66);
+    font-size: 13px;
+  }
+  .option {
+    color: black;
+    & :first-child {
+      margin: 0;
+      padding: 6px;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    & :last-child {
+      margin: 0;
+      padding: 6px;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: transparent;
+    cursor: pointer;
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
   }
 }
