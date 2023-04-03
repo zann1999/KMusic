@@ -35,7 +35,7 @@ function Header() {
           {/* input */}
           <Tippy
             interactive={true}
-            visible={true}
+            visible={false}
             render={(attrs) => (
               <div className={cx("searchbox")} tabIndex="-1" {...attrs}>
                 <h3>Gợi ý kết quả</h3>
@@ -54,10 +54,18 @@ function Header() {
       </div>
 
       <div className={cx("boxsign")}>
-        <div className={cx("dowload")}>
-          <FontAwesomeIcon icon={faDownload} />
-          <h3>Tải bản Windows</h3>
-        </div>
+        <Tippy
+          render={(attrs) => (
+            <div className={cx("boxtippy")} tabIndex="-1" {...attrs}>
+              Sắp ra mắt
+            </div>
+          )}
+        >
+          <div className={cx("dowload")}>
+            <FontAwesomeIcon icon={faDownload} />
+            <h3>Tải bản Windows</h3>
+          </div>
+        </Tippy>
 
         <Tippy
           render={(attrs) => (

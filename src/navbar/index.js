@@ -22,7 +22,7 @@ function NavBar({ children }) {
         <a className={cx("boxlogo")} href="/">
           <img src="https://i.imgur.com/Byljp0u.png" alt="logo" />
           <h2>usic</h2>
-          <h3>mp3</h3>
+          <h3>beta</h3>
         </a>
         <div className={cx("boxbutton")}>
           <div className={cx("button")}>

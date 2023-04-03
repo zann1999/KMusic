@@ -3,7 +3,78 @@
   height: 90px;
   width: 100%;
   position: fixed;
+  justify-content: space-between;
+  align-items: center;
   bottom: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
+}
+.playbox {
+  height: 90px;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.playSong {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  button {
+    color: #32323d;
+
+    font-size: 20px;
+    padding: 3px;
+    margin-right: 14px;
+    margin-left: 14px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    &:hover {
+      color: #0e8080;
+    }
+  }
+  .Play,
+  .Pause {
+    font-size: 40px;
+    margin: 0;
+  }
+}
+.timeSong {
+  height: 18px;
+  background-color: #0e8080;
+  width: 100%;
+}
+
+.optionSong {
+  display: flex;
+  margin-right: 24px;
+  button {
+    color: #32323d;
+    font-size: 16px;
+    padding: 3px;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    &:hover {
+      color: #0e8080;
+    }
+  }
+  .listsong {
+    border-left: 2px solid #b0b0bc;
+    padding-left: 18px;
+  }
+  .soud {
+    display: flex;
+    .volume {
+      width: 70px;
+      height: 15px;
+      background-color: #0e8080;
+    }
+  }
+}
+.active {
+  display: none;
 }
