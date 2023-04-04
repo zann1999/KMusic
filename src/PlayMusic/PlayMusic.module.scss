@@ -9,6 +9,10 @@
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
 }
+.infoSong {
+  height: 90px;
+  margin-right: 56px;
+}
 .playbox {
   height: 90px;
   width: 600px;
@@ -42,8 +46,63 @@
 }
 .timeSong {
   height: 18px;
-  background-color: #0e8080;
+  background-color: transparent;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .timeStart {
+    margin-left: 12px;
+    color: #79858a;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .timeEnd {
+    margin-right: 12px;
+    color: #464952;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .timebox {
+    height: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .timeline {
+      width: 488px;
+      height: 2px;
+      background-color: #acc2c2;
+      border-radius: 4px;
+      // background: linear-gradient(
+      //   to right,
+      //   #0e8080 0%,
+      //   #0e8080 53.0837%,
+      //   rgba(0, 0, 0, 0.1) 53.0837%,
+      //   rgba(0, 0, 0, 0.1) 100%
+      // );
+    }
+    .timenow {
+      background-color: #0e8080;
+
+      height: 2px;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      display: none;
+      // transform: translate(275.232px, -4px);
+    }
+    &:hover {
+      .timeline {
+        height: 4px;
+      }
+      .timenow {
+        display: block;
+      }
+    }
+  }
 }
 
 .optionSong {
@@ -68,10 +127,35 @@
   }
   .soud {
     display: flex;
-    .volume {
-      width: 70px;
-      height: 15px;
-      background-color: #0e8080;
+    align-items: center;
+    .soundbox {
+      height: 18px;
+      display: flex;
+      align-items: center;
+      .volume {
+        width: 70px;
+        height: 3px;
+        background-color: transparent;
+        margin-left: 8px;
+        border-radius: 4px;
+      }
+      .volumenow {
+        background-color: #0e8080;
+
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        display: none;
+        // transform: translate(275.232px, -4px);
+      }
+      &:hover {
+        .volume {
+          height: 6px;
+        }
+        .volumenow {
+          display: block;
+        }
+      }
     }
   }
 }

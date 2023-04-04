@@ -15,6 +15,7 @@ import Tippy from "@tippyjs/react/headless";
 
 import "tippy.js/dist/tippy.css"; // optional
 import SearchResult from "../SearchResult";
+import Settinglist from "../list/setting";
 
 const cx = classNames.bind(styles);
 
@@ -85,9 +86,19 @@ function Header() {
             </div>
           )}
         >
-          <div className={cx("setting")}>
-            <FontAwesomeIcon icon={faGear} />
-          </div>
+          <Tippy
+            interactive={true}
+            visible={true}
+            render={(attrs) => (
+              <div className={cx("settingbox")} tabIndex="-1" {...attrs}>
+                <Settinglist />
+              </div>
+            )}
+          >
+            <div className={cx("setting")}>
+              <FontAwesomeIcon icon={faGear} />
+            </div>
+          </Tippy>
         </Tippy>
         <h3 className={cx("sign")}>Đăng nhập</h3>
       </div>
