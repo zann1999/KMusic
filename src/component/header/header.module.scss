@@ -1,7 +1,8 @@
 .header {
   width: calc(100% - 240px);
+  backdrop-filter: blur(50px);
   height: 70px;
-  background-color: #ced9d9;
+  background-color: rgba(206, 217, 217, 0.8);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08);
   display: flex;
   justify-content: space-between;

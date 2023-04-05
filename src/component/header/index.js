@@ -88,7 +88,7 @@ function Header() {
         >
           <Tippy
             interactive={true}
-            visible={true}
+            visible={false}
             render={(attrs) => (
               <div className={cx("settingbox")} tabIndex="-1" {...attrs}>
                 <Settinglist />

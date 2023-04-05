@@ -1,0 +1,67 @@
+.HomeContent {
+  margin-top: 70px;
+  height: 2000px;
+  margin-left: 60px;
+
+  .slideimg {
+    margin-top: 110px;
+    display: flex;
+    justify-content: space-between;
+    .img:last-child {
+      margin-right: 60px;
+    }
+
+    img {
+      height: 210px;
+      width: 373px;
+      border-radius: 8px;
+    }
+  }
+}
+.newmusic {
+  margin-top: 50px;
+  margin-right: 60px;
+  .item {
+    font-size: 20px;
+    color: #32323d;
+    margin: 0;
+    padding: 0;
+  }
+  .locationItem {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    .boxlocaltion {
+      width: 332px;
+      display: flex;
+      justify-content: space-between;
+      .buttonLocation {
+        background-color: transparent;
+        border: 1px solid #8c8c8d;
+        padding: 4px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      .active {
+        background-color: #0f7070;
+        color: white;
+        border: 1px solid #0f7070;
+      }
+    }
+    .buttonAll {
+      display: flex;
+      padding: 4px 10px 0 10px;
+      background-color: transparent;
+      border: none;
+      color: #878787;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover {
+        color: #0f7070;
+      }
+      p {
+        margin-right: 12px;
+      }
+    }
+  }
+}
