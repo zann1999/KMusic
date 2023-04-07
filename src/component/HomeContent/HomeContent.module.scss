@@ -1,6 +1,6 @@
 .HomeContent {
   margin-top: 70px;
-  height: 2000px;
+
   margin-left: 60px;
 
   .slideimg {
@@ -36,16 +36,28 @@
       display: flex;
       justify-content: space-between;
       .buttonLocation {
+        width: 100px;
         background-color: transparent;
         border: 1px solid #8c8c8d;
-        padding: 4px 20px;
+        padding: 4px 0px;
+
         border-radius: 20px;
         cursor: pointer;
+        &:hover {
+          color: #0f7070;
+          border: 1px solid #0f7070;
+        }
       }
       .active {
         background-color: #0f7070;
         color: white;
         border: 1px solid #0f7070;
+        &:hover {
+          color: #cccccc;
+          background-color: #0c5f5f;
+
+          border: 1px solid #0f7070;
+        }
       }
     }
     .buttonAll {
@@ -63,5 +75,80 @@
         margin-right: 12px;
       }
     }
+  }
+  .musicitem {
+    position: relative;
+    height: 80px;
+    width: 374px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    color: #747676;
+
+    .imgitem {
+      height: 60px;
+      width: 60px;
+      margin-left: 10px;
+      border-radius: 4px;
+      margin-right: 12px;
+      cursor: pointer;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #454650;
+    }
+    h4,
+    h5 {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    h4:hover {
+      color: #0f7070;
+      cursor: pointer;
+    }
+    .play {
+      position: absolute;
+      color: white;
+
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      left: 10px;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      padding: 16.8px 22.5px;
+      border-radius: 4px;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .option {
+      position: absolute;
+      right: 12px;
+      padding: 6px 12px;
+      color: #454650;
+      cursor: pointer;
+      display: none;
+      &:hover {
+        color: #0f7070;
+      }
+    }
+    &:hover {
+      background-color: #e7ecec;
+      .play,
+      .option {
+        display: block;
+      }
+    }
+  }
+  .musicitem ~ .musicitem {
+    margin-top: 0px;
+  }
+  .listmusic {
+    display: flex;
+    justify-content: space-between;
+  }
+  .colmusic {
   }
 }
