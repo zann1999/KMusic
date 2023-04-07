@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/KMusic/static/css/main.5489fe92.css",
+    "main.js": "/KMusic/static/js/main.63f57cd7.js",
+    "static/js/787.74feab1e.chunk.js": "/KMusic/static/js/787.74feab1e.chunk.js",
+    "index.html": "/KMusic/index.html",
+    "main.5489fe92.css.map": "/KMusic/static/css/main.5489fe92.css.map",
+    "main.63f57cd7.js.map": "/KMusic/static/js/main.63f57cd7.js.map",
+    "787.74feab1e.chunk.js.map": "/KMusic/static/js/787.74feab1e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5489fe92.css",
+    "static/js/main.63f57cd7.js"
+  ]
+}
