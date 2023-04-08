@@ -10,12 +10,14 @@ import {
   faPlay,
 } from "@fortawesome/free-solid-svg-icons";
 import Chill from "../Chill";
+import HappyWeekend from "../HappyWeekend";
+import SinggerTop from "../SinggerTop";
 
 const cx = classNames.bind(styles);
 
 function HomeContent() {
   return (
-    <div className={cx("HomeContent")}>
+    <div className={cx("HomeContent")} id="scrollhome">
       <div className={cx("slideimg")}>
         <div className={cx("img")}>
           <img
@@ -366,6 +368,8 @@ function HomeContent() {
         </div>
       </div>
       <Chill></Chill>
+      <HappyWeekend></HappyWeekend>
+      <SinggerTop></SinggerTop>
     </div>
   );
 }
