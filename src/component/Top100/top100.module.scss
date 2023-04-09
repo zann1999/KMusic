@@ -1,17 +1,17 @@
-.HappyWeekend {
+.Top100 {
   margin-top: 36px;
   h1 {
     font-size: 20px;
     color: #32323d;
   }
-  .boxHappyWeekend {
+  .boxTop100 {
     display: flex;
     justify-content: space-between;
     margin-top: 24px;
     .boxmusic {
       width: 213.6px;
     }
-    .imgHappyWeekend {
+    .imgTop100 {
       width: 213.6px;
       overflow: hidden;
       border-radius: 6px;
@@ -59,12 +59,16 @@
     img {
       height: 213.6px;
       width: 213.6px;
-      border-radius: 6px;
       transition: transform 0.7s;
+      border-radius: 6px;
+    }
+    h4 {
+      font-size: 14px;
+      margin-top: 12px;
     }
     p {
       color: #696969;
-      margin-top: 6px;
+      margin-top: 4px;
       font-size: 15px;
     }
   }

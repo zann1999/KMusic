@@ -1,0 +1,102 @@
+.TopNewMusic {
+  margin-top: 36px;
+
+  h1 {
+    font-size: 20px;
+    color: #32323d;
+  }
+  .boxNewMusic {
+    display: flex;
+    justify-content: space-between;
+    .topMusic {
+      margin-top: 24px;
+      display: flex;
+      border-radius: 6px;
+      align-items: center;
+      height: 150px;
+      width: 375px;
+      position: relative;
+      background-color: #dde4e4;
+
+      .boximg {
+        cursor: pointer;
+
+        margin-left: 14px;
+        height: 120px;
+        width: 120px;
+        border-radius: 6px;
+
+        overflow: hidden;
+        &:hover {
+          img {
+            transform: scale(1.1) translateZ(0);
+            transition: transform 0.7s;
+          }
+          .loadbox {
+            display: flex;
+          }
+        }
+        .loadbox {
+          height: 120px;
+          width: 120px;
+          background-color: rgba($color: #000000, $alpha: 0.3);
+          position: absolute;
+          left: 14px;
+          top: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 20px;
+          color: white;
+          border-radius: 6px;
+          display: none;
+          .showplay {
+            font-size: 36px;
+            &:hover {
+              color: #0f7070;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      img {
+        height: 120px;
+        width: 120px;
+        border-radius: 6px;
+        transition: transform 0.7s;
+      }
+      h2 {
+        margin-left: 10px;
+        font-size: 16px;
+        color: #32323d;
+        font-weight: 700;
+        line-height: 1.38;
+      }
+      h3 {
+        font-size: 12px;
+        margin-left: 10px;
+        color: #696969;
+        font-weight: 400;
+        margin-top: 6px;
+        margin-bottom: 80px;
+      }
+      span {
+        position: absolute;
+        bottom: 12px;
+        left: 150px;
+        font-size: 40px;
+        font-weight: 900;
+        color: transparent;
+        line-height: 1;
+        opacity: 0.4;
+        -webkit-text-stroke: 1px #6b3483;
+      }
+      .date {
+        position: absolute;
+        bottom: 18px;
+        right: 16px;
+        color: #696969;
+      }
+    }
+  }
+}

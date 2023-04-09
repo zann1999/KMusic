@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styles from "./SinggerTop.module.scss";
+import styles from "./Piano.module.scss";
 import classNames from "classnames/bind";
 import { faCirclePlay, faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
@@ -7,17 +7,29 @@ import Tippy from "@tippyjs/react/headless";
 import "tippy.js/dist/tippy.css"; // optional
 const cx = classNames.bind(styles);
 
-function SinggerTop() {
+function Piano() {
   return (
-    <div className={cx("SinggerTop")}>
-      <h1>Nghệ Sĩ Thịnh Hành</h1>
+    <div className={cx("Piano")}>
+      <div className={cx("tittle")}>
+        <div className={cx("boximgtittle")}>
+          <img
+            className={cx("imgtittle")}
+            src="https://photo-zmp3.zmdcdn.me/cover/6/d/9/6/6d96a92b6c85346d560eeb8a8f17c296.jpg"
+          ></img>
+        </div>
 
-      <div className={cx("boxSinggerTop")}>
+        <div>
+          <h2>BẠN ĐÃ NGHE NHIỀU</h2>
+          <h1>Piano</h1>
+        </div>
+      </div>
+
+      <div className={cx("boxPiano")}>
         <div className={cx("boxmusic")}>
-          <div className={cx("imgSinggerTop")}>
+          <div className={cx("imgPiano")}>
             <img
-              src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/a/a/e/9/aae98c264c71d089e2c2d9f01112aee7.jpg"
-              alt="SinggerTopimg"
+              src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/b/5/b/9/b5b9544f73738b4c75ef1c89bcb6710b.jpg"
+              alt="Pianoimg"
             ></img>
             <div className={cx("loadbox")}>
               <Tippy
@@ -47,13 +59,15 @@ function SinggerTop() {
               </Tippy>
             </div>
           </div>
-          <p>'Thị Mầu' Hòa Minzy và những bản Hit đỉnh nhất</p>
+
+          <h4>Piano K-Pop</h4>
+          <p>IU, Paul Kim, AKMU...</p>
         </div>
         <div className={cx("boxmusic")}>
-          <div className={cx("imgSinggerTop")}>
+          <div className={cx("imgPiano")}>
             <img
-              src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/a/a/e/9/aae98c264c71d089e2c2d9f01112aee7.jpg"
-              alt="SinggerTopimg"
+              src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/b/5/b/9/b5b9544f73738b4c75ef1c89bcb6710b.jpg"
+              alt="Pianoimg"
             ></img>
             <div className={cx("loadbox")}>
               <Tippy
@@ -83,13 +97,14 @@ function SinggerTop() {
               </Tippy>
             </div>
           </div>
-          <p>'Thị Mầu' Hòa Minzy và những bản Hit đỉnh nhất</p>
+          <h4>Piano K-Pop</h4>
+          <p>IU, Paul Kim, AKMU...</p>
         </div>
         <div className={cx("boxmusic")}>
-          <div className={cx("imgSinggerTop")}>
+          <div className={cx("imgPiano")}>
             <img
-              src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/a/a/e/9/aae98c264c71d089e2c2d9f01112aee7.jpg"
-              alt="SinggerTopimg"
+              src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/b/5/b/9/b5b9544f73738b4c75ef1c89bcb6710b.jpg"
+              alt="Pianoimg"
             ></img>
             <div className={cx("loadbox")}>
               <Tippy
@@ -119,13 +134,14 @@ function SinggerTop() {
               </Tippy>
             </div>
           </div>
-          <p>'Thị Mầu' Hòa Minzy và những bản Hit đỉnh nhất</p>
+          <h4>Piano K-Pop</h4>
+          <p>IU, Paul Kim, AKMU...</p>
         </div>
         <div className={cx("boxmusic")}>
-          <div className={cx("imgSinggerTop")}>
+          <div className={cx("imgPiano")}>
             <img
-              src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/a/a/e/9/aae98c264c71d089e2c2d9f01112aee7.jpg"
-              alt="SinggerTopimg"
+              src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/b/5/b/9/b5b9544f73738b4c75ef1c89bcb6710b.jpg"
+              alt="Pianoimg"
             ></img>
             <div className={cx("loadbox")}>
               <Tippy
@@ -155,13 +171,14 @@ function SinggerTop() {
               </Tippy>
             </div>
           </div>
-          <p>'Thị Mầu' Hòa Minzy và những bản Hit đỉnh nhất</p>
+          <h4>Piano K-Pop</h4>
+          <p>IU, Paul Kim, AKMU...</p>
         </div>
         <div className={cx("boxmusic")}>
-          <div className={cx("imgSinggerTop")}>
+          <div className={cx("imgPiano")}>
             <img
-              src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/a/a/e/9/aae98c264c71d089e2c2d9f01112aee7.jpg"
-              alt="SinggerTopimg"
+              src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/b/5/b/9/b5b9544f73738b4c75ef1c89bcb6710b.jpg"
+              alt="Pianoimg"
             ></img>
             <div className={cx("loadbox")}>
               <Tippy
@@ -191,11 +208,12 @@ function SinggerTop() {
               </Tippy>
             </div>
           </div>
-          <p>'Thị Mầu' Hòa Minzy và những bản Hit đỉnh nhất</p>
+          <h4>Piano K-Pop</h4>
+          <p>IU, Paul Kim, AKMU...</p>
         </div>
       </div>
     </div>
   );
 }
 
-export default SinggerTop;
+export default Piano;

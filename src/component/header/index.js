@@ -36,7 +36,7 @@ function Header() {
           {/* input */}
           <Tippy
             interactive={true}
-            visible={false}
+            visible={true}
             render={(attrs) => (
               <div className={cx("searchbox")} tabIndex="-1" {...attrs}>
                 <h3>Gợi ý kết quả</h3>

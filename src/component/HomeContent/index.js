@@ -12,6 +12,10 @@ import {
 import Chill from "../Chill";
 import HappyWeekend from "../HappyWeekend";
 import SinggerTop from "../SinggerTop";
+import TopNewMusic from "../TopNewMusic";
+import Top100 from "../Top100";
+import AlbumHot from "../AlbumHot";
+import Piano from "../Piano";
 
 const cx = classNames.bind(styles);
 
@@ -370,6 +374,10 @@ function HomeContent() {
       <Chill></Chill>
       <HappyWeekend></HappyWeekend>
       <SinggerTop></SinggerTop>
+      <TopNewMusic></TopNewMusic>
+      <Top100></Top100>
+      <Piano></Piano>
+      <AlbumHot></AlbumHot>
     </div>
   );
 }

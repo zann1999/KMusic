@@ -2,7 +2,6 @@
   "name": "kmusic",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://zann1999.github.io/KMusic/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
@@ -27,9 +26,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-app-rewired eject"
   },
   "eslintConfig": {
     "extends": [

@@ -1,17 +1,53 @@
-.HappyWeekend {
+.Piano {
   margin-top: 36px;
-  h1 {
-    font-size: 20px;
-    color: #32323d;
+  .tittle {
+    display: flex;
+    .boximgtittle {
+      overflow: hidden;
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+      margin-right: 12px;
+      border-radius: 4px;
+
+      &:hover {
+        img {
+          transform: scale(1.1) translateZ(0);
+          transition: transform 0.7s;
+        }
+      }
+    }
+    .imgtittle {
+      height: 50px;
+      width: 50px;
+      transition: transform 0.7s;
+      border-radius: 4px;
+      margin-right: 12px;
+      cursor: pointer;
+    }
+    h1 {
+      font-size: 20px;
+      color: #32323d;
+      cursor: pointer;
+      display: inline-block;
+      &:hover {
+        color: #0f7070;
+      }
+    }
+    h2 {
+      font-size: 14px;
+      font-weight: 400;
+      color: #696969;
+    }
   }
-  .boxHappyWeekend {
+  .boxPiano {
     display: flex;
     justify-content: space-between;
     margin-top: 24px;
     .boxmusic {
       width: 213.6px;
     }
-    .imgHappyWeekend {
+    .imgPiano {
       width: 213.6px;
       overflow: hidden;
       border-radius: 6px;
@@ -62,9 +98,13 @@
       border-radius: 6px;
       transition: transform 0.7s;
     }
+    h4 {
+      font-size: 14px;
+      margin-top: 12px;
+    }
     p {
       color: #696969;
-      margin-top: 6px;
+      margin-top: 4px;
       font-size: 15px;
     }
   }
