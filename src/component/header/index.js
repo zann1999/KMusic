@@ -1,5 +1,6 @@
 import styles from "./header.module.scss";
 import classNames from "classnames/bind";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
@@ -16,10 +17,35 @@ import Tippy from "@tippyjs/react/headless";
 import "tippy.js/dist/tippy.css"; // optional
 import SearchResult from "../SearchResult";
 import Settinglist from "../list/setting";
+import { useRef, useState, useEffect } from "react";
+import useDebounce from "../../hooks/useDebounce";
 
 const cx = classNames.bind(styles);
 
 function Header() {
+  const [focus, setfocus] = useState(false);
+  const [setting, setSetting] = useState(false);
+  const [dataSearch, setdata] = useState();
+  const [value, setValue] = useState("");
+  const refInput = useRef();
+
+  const debounced = useDebounce(value, 333);
+
+  const handle = () => {
+    setfocus(true);
+  };
+  useEffect(() => {
+    fetch(
+      `https://tiktok.fullstack.edu.vn/api/users/search?q=${
+        debounced !== "" ? encodeURIComponent(debounced) : "hoa"
+      }&type=less`
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        setdata(res.data);
+      });
+  }, [debounced.trim()]);
+
   return (
     <div className={cx("header")}>
       <div className={cx("search")}>
@@ -36,19 +62,23 @@ function Header() {
           {/* input */}
           <Tippy
             interactive={true}
-            visible={true}
+            visible={focus}
             render={(attrs) => (
               <div className={cx("searchbox")} tabIndex="-1" {...attrs}>
                 <h3>Gợi ý kết quả</h3>
-                <SearchResult />
+                {dataSearch && <SearchResult data={dataSearch} />}
               </div>
             )}
+            onClickOutside={() => setfocus(false)}
           >
             <input
+              value={value}
+              onFocus={handle}
+              ref={refInput}
               type={"text"}
               className={cx("inputsearch")}
               placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát..."
-              value={null}
+              onChange={(e) => setValue(e.currentTarget.value)}
             ></input>
           </Tippy>
         </div>
@@ -86,16 +116,18 @@ function Header() {
             </div>
           )}
         >
+          {/* setting */}
           <Tippy
             interactive={true}
-            visible={false}
+            visible={setting}
+            onClickOutside={() => setSetting(false)}
             render={(attrs) => (
               <div className={cx("settingbox")} tabIndex="-1" {...attrs}>
                 <Settinglist />
               </div>
             )}
           >
-            <div className={cx("setting")}>
+            <div onClick={() => setSetting(true)} className={cx("setting")}>
               <FontAwesomeIcon icon={faGear} />
             </div>
           </Tippy>

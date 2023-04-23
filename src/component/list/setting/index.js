@@ -18,6 +18,7 @@ import {
   faShieldHeart,
   faSignature,
 } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 const cx = classNames.bind(styles);
 
@@ -39,6 +40,7 @@ function Settinglist() {
           </li>
         </Tippy>
         <Tippy
+          interactive={true}
           render={(attrs) => (
             <div className={cx("boxlv2")} tabIndex="-1" {...attrs}>
               <div className={cx("theme")}>
@@ -58,7 +60,10 @@ function Settinglist() {
             </div>
           )}
         >
-          <li>
+          <li
+          // onMouseEnter={() => setShow(true)}
+          // onMouseLeave={() => setShow(false)}
+          >
             <FontAwesomeIcon icon={faBrush} />
             <span>Giao diện</span>
             <FontAwesomeIcon icon={faChevronRight} />

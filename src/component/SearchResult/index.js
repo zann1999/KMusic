@@ -7,14 +7,10 @@ import { faGem } from "@fortawesome/free-regular-svg-icons";
 
 const cx = classNames.bind(styles);
 
-function SearchResult() {
+function SearchResult({ data }) {
   return (
     <div className={cx("SearchResult")}>
-      <UserSearch />
-      <UserSearch />
-      <UserSearch />
-      <UserSearch />
-      <UserSearch />
+      <UserSearch data={data} />
     </div>
   );
 }

@@ -16,6 +16,7 @@ import TopNewMusic from "../TopNewMusic";
 import Top100 from "../Top100";
 import AlbumHot from "../AlbumHot";
 import Piano from "../Piano";
+import HotRadio from "../Radio/HotRadio";
 
 const cx = classNames.bind(styles);
 
@@ -378,6 +379,7 @@ function HomeContent() {
       <Top100></Top100>
       <Piano></Piano>
       <AlbumHot></AlbumHot>
+      <HotRadio></HotRadio>
     </div>
   );
 }

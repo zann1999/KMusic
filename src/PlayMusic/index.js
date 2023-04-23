@@ -3,6 +3,7 @@ import UserSearch from "../component/SearchResult/UserSearch";
 import styles from "./PlayMusic.module.scss";
 import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react/headless";
+import soud from "./anh.mp3";
 
 import "tippy.js/dist/tippy.css"; // optional
 import {
@@ -20,10 +21,38 @@ import {
   faCirclePlay,
   faWindowRestore,
 } from "@fortawesome/free-regular-svg-icons";
+import { useEffect, useRef, useState } from "react";
 
 const cx = classNames.bind(styles);
-
+const audio = new Audio(soud);
+audio.play();
+let totaltime = 310;
 function PlayMusic() {
+  const [activePlay, setactivePlay] = useState("");
+  const [activePause, setactivePause] = useState("active");
+  const [timenow, setTimenow] = useState(0);
+  const [timeload, setTimeload] = useState(0);
+  const [colorbox, setcolorbox] = useState(timenow);
+
+  audio.ontimeupdate = () => {
+    setTimenow(audio.currentTime.toFixed(0));
+  };
+  useEffect(() => {
+    audio.currentTime = timeload;
+  }, [timeload]);
+
+  const handelerPlay = () => {
+    audio.pause();
+
+    setactivePlay("active");
+    setactivePause("");
+  };
+  const handelerPause = () => {
+    audio.play();
+    setactivePlay("");
+    setactivePause("active");
+  };
+
   return (
     <div className={cx("playMusic")}>
       <div className={cx("infoSong")}>
@@ -45,10 +74,10 @@ function PlayMusic() {
           <button>
             <FontAwesomeIcon icon={faBackwardStep} />
           </button>
-          <button className={cx("Play")}>
+          <button className={cx("Play", activePause)} onClick={handelerPause}>
             <FontAwesomeIcon icon={faCirclePlay} />
           </button>
-          <button className={cx("Pause", "active")}>
+          <button className={cx("Pause", activePlay)} onClick={handelerPlay}>
             <FontAwesomeIcon icon={faCirclePause} />
           </button>
           <Tippy
@@ -75,13 +104,34 @@ function PlayMusic() {
           </Tippy>
         </div>
         <div className={cx("timeSong")}>
-          <span className={cx("timeStart")}>1:30</span>
-          <div className={cx("timebox")}>
+          <span className={cx("timeStart")}>{timenow > 0 ? timenow : 0}</span>
+          <div
+            className={cx("timebox")}
+            onMouseMove={(e) => {
+              if ((e.clientX - 512) / 488 > 0 && (e.clientX - 512) / 488 < 1) {
+                setcolorbox((e.clientX - 512) / 488);
+              } else {
+                return;
+              }
+            }}
+            onClick={(e) => {
+              if ((e.clientX - 512) / 488 > 0 && (e.clientX - 512) / 488 < 1) {
+                setTimeload(
+                  (((e.clientX - 512) / 488) * totaltime - 8).toFixed(0)
+                );
+              } else {
+                return;
+              }
+            }}
+          >
             <div
               className={cx("timeline")}
               style={{
-                background:
-                  "linear-gradient( to right, #0e8080 0%, #0e8080 53.0837%, rgba(0, 0, 0, 0.1) 53.0837%,  rgba(0, 0, 0, 0.1) 100% )",
+                background: `linear-gradient( to right, #0e8080 0%, #0e8080 ${
+                  (timenow / totaltime) * 100
+                }%, rgba(0, 0, 0, 0.1) ${
+                  (timenow / totaltime) * 100
+                }%,  rgba(0, 0, 0, 0.1) 100% )`,
               }}
             >
               <div
@@ -89,16 +139,24 @@ function PlayMusic() {
                 tabindex="0"
                 aria-valuemax="211.176"
                 aria-valuemin="0"
-                aria-valuenow="156.6"
+                aria-valuenow={
+                  colorbox == timenow
+                    ? (timenow / totaltime) * 211.176
+                    : colorbox * 211.176
+                }
                 draggable="false"
                 role="slider"
                 style={{
-                  transform: "translate(275.232px, -4px)",
+                  transform: `translate(${
+                    colorbox == timenow
+                      ? (timenow / totaltime) * 488
+                      : colorbox * 488 - 8
+                  }px, -4px)`,
                 }}
               ></div>
             </div>
           </div>
-          <span className={cx("timeEnd")}>5:00</span>
+          <span className={cx("timeEnd")}>{totaltime}</span>
         </div>
       </div>
       <div className={cx("optionSong")}>
