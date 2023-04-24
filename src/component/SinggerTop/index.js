@@ -157,7 +157,7 @@ function SinggerTop() {
           </div>
           <p>'Thị Mầu' Hòa Minzy và những bản Hit đỉnh nhất</p>
         </div>
-        <div className={cx("boxmusic")}>
+        <div className={cx("boxmusic", "hide")}>
           <div className={cx("imgSinggerTop")}>
             <img
               src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/a/a/e/9/aae98c264c71d089e2c2d9f01112aee7.jpg"

@@ -157,7 +157,7 @@ function HappyWeekend() {
           </div>
           <p>Tận hưởng cuối tuần cùng thanh âm thảnh thơi của V-Pop</p>
         </div>
-        <div className={cx("boxmusic")}>
+        <div className={cx("boxmusic", "hide")}>
           <div className={cx("imgHappyWeekend")}>
             <img
               src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/a/d/6/2/ad62ece92094a309a3557f6b61e680f9.jpg"

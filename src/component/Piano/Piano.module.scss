@@ -46,13 +46,14 @@
     justify-content: space-between;
     margin-top: 24px;
     .boxmusic {
-      width: 213.6px;
+      width: calc(27.823vh + 5px);
     }
     .imgPiano {
-      width: 213.6px;
+      height: calc(28.7vh);
+      width: calc(27.823vh + 5px);
       overflow: hidden;
       border-radius: 6px;
-      height: 213.6px;
+
       cursor: pointer;
       position: relative;
       &:hover {
@@ -66,8 +67,8 @@
       }
     }
     .loadbox {
-      height: 213.6px;
-      width: 213.6px;
+      height: calc(28.7vh);
+      width: calc(27.823vh + 5px);
       background-color: rgba($color: #000000, $alpha: 0.3);
       position: absolute;
       left: 0px;
@@ -94,8 +95,8 @@
       }
     }
     img {
-      height: 213.6px;
-      width: 213.6px;
+      height: calc(28.7vh);
+      width: calc(27.823vh + 5px);
       border-radius: 6px;
       transition: transform 0.7s;
     }
@@ -108,5 +109,10 @@
       margin-top: 4px;
       font-size: 15px;
     }
+  }
+}
+@media (max-width: 1350px) {
+  .hide {
+    display: none;
   }
 }

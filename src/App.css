@@ -33,3 +33,8 @@
   color: #0f7070;
   border-left: 4px solid #0e8080;
 }
+@media (max-width: 1420px) {
+  .hide {
+    display: none;
+  }
+}

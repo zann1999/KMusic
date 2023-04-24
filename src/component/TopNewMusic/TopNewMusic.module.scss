@@ -98,5 +98,14 @@
         color: #696969;
       }
     }
+    .topMusic ~ .topMusic {
+      margin-left: 24px;
+    }
+  }
+}
+
+@media (max-width: 1340px) {
+  .hide {
+    display: none !important;
   }
 }

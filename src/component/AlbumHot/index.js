@@ -162,7 +162,7 @@ function AlbumHot() {
           <h4>Lý Do Là Vậy (Remix) (Single)</h4>
           <p>Hana Cẩm Tiên, TVK</p>
         </div>
-        <div className={cx("boxmusic")}>
+        <div className={cx("boxmusic", "hide")}>
           <div className={cx("imgAlbumHot")}>
             <img
               src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/3/6/c/0/36c04a84c9d580012f2f7b5a31ee123c.jpg"

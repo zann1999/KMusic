@@ -174,7 +174,7 @@ function Piano() {
           <h4>Piano K-Pop</h4>
           <p>IU, Paul Kim, AKMU...</p>
         </div>
-        <div className={cx("boxmusic")}>
+        <div className={cx("boxmusic", "hide")}>
           <div className={cx("imgPiano")}>
             <img
               src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/b/5/b/9/b5b9544f73738b4c75ef1c89bcb6710b.jpg"

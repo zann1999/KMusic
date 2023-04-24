@@ -158,7 +158,7 @@ function Chill() {
           </div>
           <p>Buông mình thư giãn cùng nhạc Indie thật êm tai</p>
         </div>
-        <div className={cx("boxmusic")}>
+        <div className={cx("boxmusic", "hide")}>
           <div className={cx("imgchill")}>
             <img
               src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/f/6/c/7/f6c74d388a0cb7263cd070c8ea9af5ae.jpg"

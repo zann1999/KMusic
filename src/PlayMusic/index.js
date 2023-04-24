@@ -104,7 +104,11 @@ function PlayMusic() {
           </Tippy>
         </div>
         <div className={cx("timeSong")}>
-          <span className={cx("timeStart")}>{timenow > 0 ? timenow : 0}</span>
+          <span className={cx("timeStart")}>
+            {timenow > 0
+              ? `${Math.floor(timenow / 60)} : ${timenow % 60}`
+              : "0 : 00"}
+          </span>
           <div
             className={cx("timebox")}
             onMouseMove={(e) => {
@@ -156,7 +160,9 @@ function PlayMusic() {
               ></div>
             </div>
           </div>
-          <span className={cx("timeEnd")}>{totaltime}</span>
+          <span className={cx("timeEnd")}>{`${Math.floor(totaltime / 60)} : ${
+            totaltime % 60
+          }`}</span>
         </div>
       </div>
       <div className={cx("optionSong")}>

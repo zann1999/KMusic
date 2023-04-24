@@ -113,7 +113,7 @@ function HotRadio() {
           </div>
         </div>
         <div>
-          <div className={cx("boxradio")}>
+          <div className={cx("boxradio", "hide")}>
             <div className={cx("itemradio")}>
               <div className={cx("boximg")}>
                 <div className={cx("loadbox")}>
@@ -132,8 +132,8 @@ function HotRadio() {
             </div>
           </div>
         </div>
-        <div>
-          <div className={cx("boxradio")}>
+        {/* <div>
+          <div className={cx("boxradio", "hide")}>
             <div className={cx("itemradio")}>
               <div className={cx("boximg")}>
                 <div className={cx("loadbox")}>
@@ -151,7 +151,7 @@ function HotRadio() {
               <span>568 đang nghe</span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

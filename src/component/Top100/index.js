@@ -162,7 +162,7 @@ function Top100() {
           <h4>Top 100 Nhạc V-Pop Hay Nhất</h4>
           <p>Jack - J97, MONO, Tăng Duy Tân, ...</p>
         </div>
-        <div className={cx("boxmusic")}>
+        <div className={cx("boxmusic", "hide")}>
           <div className={cx("imgTop100")}>
             <img
               src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/4/1/8/3/4183ced5ebbbf4b3e093b82ca334cc9f.jpg"

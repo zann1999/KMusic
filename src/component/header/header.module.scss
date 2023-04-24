@@ -39,7 +39,7 @@
     align-items: center;
     box-shadow: none;
     height: 40px;
-    width: 440px;
+    width: 28.66vw;
     background-color: hsla(0, 0%, 100%, 0.3);
 
     border-radius: 20px;
@@ -49,7 +49,7 @@
     }
     .inputsearch {
       font-size: 16px;
-      width: 340px;
+      width: calc(28.66vw - 100px);
       padding: 10px 0;
       border: none;
       background-color: transparent;
@@ -69,12 +69,12 @@
     }
     .searchbox {
       position: absolute;
-      left: -228px;
+      left: calc(-14.33vw - 8px);
       top: 44px;
       box-shadow: 0 4px 6px 0 rgba(32, 33, 36, 0.28);
 
       min-height: 300px;
-      width: 440px;
+      width: 28.66vw;
       background-color: #e0ebeb;
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;

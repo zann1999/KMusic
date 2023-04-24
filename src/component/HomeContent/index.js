@@ -267,7 +267,7 @@ function HomeContent() {
             </div>
           </div>
 
-          <div className={cx("colmusic")}>
+          <div className={(cx("colmusic"), "hide")}>
             <div className={cx("musicitem")}>
               <div className={cx("play")}>
                 <FontAwesomeIcon icon={faPlay} />
