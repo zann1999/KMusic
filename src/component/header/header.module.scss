@@ -162,3 +162,28 @@
   font-weight: 700;
   cursor: pointer;
 }
+.signbox {
+  position: fixed;
+  top: -10px;
+  right: calc(50vw - 310px);
+  z-index: 99;
+}
+@media (max-width: 1262px) {
+  .dowload {
+    margin-right: 12px;
+    padding: 10px 14px;
+    margin-left: 8px;
+    h3 {
+      margin-left: 8px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .sign {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+  input::placeholder {
+    font-size: 14px;
+  }
+}

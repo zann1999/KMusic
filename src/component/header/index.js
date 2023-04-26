@@ -19,6 +19,7 @@ import SearchResult from "../SearchResult";
 import Settinglist from "../list/setting";
 import { useRef, useState, useEffect } from "react";
 import useDebounce from "../../hooks/useDebounce";
+import Login from "../Login";
 
 const cx = classNames.bind(styles);
 
@@ -132,7 +133,17 @@ function Header() {
             </div>
           </Tippy>
         </Tippy>
-        <h3 className={cx("sign")}>Đăng nhập</h3>
+        <Tippy
+          interactive={true}
+          visible={true}
+          render={(attrs) => (
+            <div className={cx("signbox")} tabIndex="-1" {...attrs}>
+              <Login></Login>
+            </div>
+          )}
+        >
+          <h3 className={cx("sign")}>Đăng nhập</h3>
+        </Tippy>
       </div>
     </div>
   );
