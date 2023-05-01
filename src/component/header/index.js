@@ -28,6 +28,7 @@ function Header() {
   const [setting, setSetting] = useState(false);
   const [dataSearch, setdata] = useState();
   const [value, setValue] = useState("");
+  const [login, setlogin] = useState(false);
   const refInput = useRef();
 
   const debounced = useDebounce(value, 333);
@@ -134,15 +135,18 @@ function Header() {
           </Tippy>
         </Tippy>
         <Tippy
+          onClickOutside={() => setlogin(false)}
           interactive={true}
-          visible={true}
+          visible={login}
           render={(attrs) => (
             <div className={cx("signbox")} tabIndex="-1" {...attrs}>
-              <Login></Login>
+              <Login login={login}></Login>
             </div>
           )}
         >
-          <h3 className={cx("sign")}>Đăng nhập</h3>
+          <h3 onClick={() => setlogin(true)} className={cx("sign")}>
+            Đăng nhập
+          </h3>
         </Tippy>
       </div>
     </div>

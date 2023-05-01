@@ -8,18 +8,15 @@ import Tippy from "@tippyjs/react/headless";
 import "tippy.js/dist/tippy.css"; // optional
 const cx = classNames.bind(styles);
 
-function UserSearch({ children, cl, data }) {
+function UserSearch({ children, cl, data, sound }) {
   return (
     <>
-      {cl ? (
+      {cl && sound ? (
         <div className={cx("user", { cl })}>
-          <img
-            src="https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_webp/avatars/5/f/5f20a37fb35ef2799e9e47847edf2b8c_1455458614.jpg"
-            alt="photo"
-          ></img>
+          <img src={sound.avatar} alt="photo"></img>
           <div>
-            <h4>Anh</h4>
-            <h5>Hương Tràm</h5>
+            <h4>{sound.name}</h4>
+            <h5>{sound.singger}</h5>
           </div>
           <div className={cx("option")}>
             <Tippy

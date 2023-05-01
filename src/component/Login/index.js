@@ -7,15 +7,27 @@ import {
   faLock,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useRef } from "react";
 const cx = className.bind(styles);
 
-function Login() {
+function Login({ login }) {
+  const inputUser = useRef();
+  useEffect(() => {
+    if (login) {
+      inputUser.current.focus();
+    } else return;
+  }, [login]);
+
   return (
     <div className={cx("boxlogin")}>
       <form className={cx("loginForm")}>
         <div className={cx("inputUsername")}>
           <FontAwesomeIcon className={cx("iconForm")} icon={faUser} />
-          <input type="text" placeholder="Tên tài khoản / Email" />
+          <input
+            ref={inputUser}
+            type="text"
+            placeholder="Tên tài khoản / Email"
+          />
         </div>
         <div className={cx("inputPass")}>
           <FontAwesomeIcon className={cx("iconForm")} icon={faLock} />
