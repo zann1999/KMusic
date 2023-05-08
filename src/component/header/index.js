@@ -140,7 +140,7 @@ function Header() {
           visible={login}
           render={(attrs) => (
             <div className={cx("signbox")} tabIndex="-1" {...attrs}>
-              <Login login={login}></Login>
+              <Login login={login} setlogin={setlogin}></Login>
             </div>
           )}
         >

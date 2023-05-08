@@ -1,0 +1,319 @@
+$white: #fcfcfc;
+$gray: #cbcdd3;
+$dark: #777777;
+$error: #ef8d9c;
+$orange: #ffc39e;
+$success: #b0db7d;
+$secondary: #99dbb4;
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+$font: "Lato", sans-serif;
+
+.wrap {
+  position: fixed;
+
+  z-index: 99999;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: start;
+  &::before {
+    content: "KMusic hiện chỉ hỗ trợ truy cập qua máy tính, sẽ sớm hỗ trợ Mobile !";
+    padding: 0 20px;
+    display: block;
+    min-height: 6.8vh;
+    width: calc(44vw - 40px);
+    top: 20vh;
+    color: #ffffff;
+    background: linear-gradient(45deg, #b0db7d, #ef8d9c);
+    left: 28vw;
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgba($gray, 10%);
+    perspective: 40px;
+    border: none;
+    text-align: center;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+h1 {
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  padding-top: 5px;
+  color: $white;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.green {
+  color: darken($secondary, 20%);
+}
+
+.red {
+  color: darken($error, 10%);
+}
+
+.alert {
+  font-weight: 700;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+p {
+  margin-top: -1px;
+  font-size: 16px;
+  font-weight: 400;
+  color: darken($dark, 10%);
+  letter-spacing: 1px;
+}
+
+button,
+.dot {
+  cursor: pointer;
+}
+
+.successbox {
+  margin-top: 30vh;
+  position: absolute;
+  width: 40vh;
+  height: 40vh;
+  left: 28vw;
+  background: linear-gradient(to bottom right, $success 40%, $secondary 100%);
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba($gray, 10%);
+  perspective: 40px;
+}
+
+.errorbox {
+  position: absolute;
+  margin-top: 30vh;
+
+  width: 40vh;
+  height: 40vh;
+  right: 28vw;
+  background: linear-gradient(to bottom left, $error 40%, $orange 100%);
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba($gray, 10%);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: $white;
+  border-radius: 50%;
+  position: absolute;
+  top: 4%;
+  right: 6%;
+  &:hover {
+    background: darken($white, 20%);
+  }
+}
+
+.two {
+  right: 12%;
+  opacity: 0.5;
+}
+
+.face {
+  position: absolute;
+  width: 33%;
+  height: 33%;
+  background: $white;
+  border-radius: 50%;
+  border: 1px solid $dark;
+  top: 12%;
+  left: 32%;
+  z-index: 2;
+  animation: bounce 1s ease-in infinite;
+}
+
+.face2 {
+  position: absolute;
+  width: 33%;
+  height: 33%;
+  background: $white;
+  border-radius: 50%;
+  border: 1px solid $dark;
+  top: 12%;
+  left: 32%;
+  z-index: 2;
+  animation: roll 3s ease-in-out infinite;
+}
+
+.eye {
+  position: absolute;
+  width: 7.5px;
+  height: 7.5px;
+  background: $dark;
+  border-radius: 50%;
+  top: 40%;
+  left: 20%;
+}
+
+.right {
+  left: 68%;
+}
+
+.mouth {
+  position: absolute;
+  top: 43%;
+  left: 41%;
+  width: 10.5px;
+  height: 10.5px;
+  border-radius: 50%;
+}
+
+.happy {
+  border: 2px solid;
+  border-color: transparent $dark $dark transparent;
+  transform: rotate(45deg);
+}
+
+.sad {
+  top: 49%;
+  border: 2px solid;
+  border-color: $dark transparent transparent $dark;
+  transform: rotate(45deg);
+}
+
+.shadow {
+  position: absolute;
+  width: 31.5%;
+  height: 4.5%;
+  opacity: 0.5;
+  background: $dark;
+  left: 32.5%;
+  top: 43%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.scale {
+  animation: scale 1s ease-in infinite;
+}
+.move {
+  animation: move 3s ease-in-out infinite;
+}
+
+.message {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  height: 40%;
+  top: 47%;
+}
+
+.buttonbox {
+  position: absolute;
+  background: $white;
+  width: 50%;
+  height: 15%;
+  border-radius: 20px;
+  top: 73%;
+  left: 25%;
+  outline: 0;
+  border: none;
+  box-shadow: 2px 2px 10px rgba($dark, 0.5);
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background: darken($white, 5%);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scale {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+    left: 25%;
+  }
+  50% {
+    left: 60%;
+    transform: rotate(168deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    left: 25%;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 25%;
+  }
+  50% {
+    left: 60%;
+  }
+  100% {
+    left: 25%;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: 10px;
+  font-family: $font;
+  p {
+    color: $error;
+    letter-spacing: 2px;
+  }
+  a {
+    color: $success;
+    text-decoration: none;
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+.hidebox {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.4s, opacity 0.4s linear;
+}
+@media (max-width: 1000px) {
+  .hide {
+    display: none;
+  }
+  .wrap {
+    height: 100vh;
+    width: 100vw;
+    .errorbox {
+      width: 86vw;
+      left: 7vw;
+    }
+    &::before {
+      text-align: center;
+      top: 16vh;
+      width: calc(90vw - 40px);
+      left: 5vw;
+    }
+  }
+}

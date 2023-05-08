@@ -1,4 +1,5 @@
 .boxlogin {
+  position: relative;
   width: 360px;
   height: 600px;
   background: linear-gradient(90deg, #0e8080, #c0d8d8);
@@ -163,5 +164,13 @@
     & :hover {
       width: 24px;
     }
+  }
+}
+.exit {
+  position: absolute;
+  top: -4px;
+  font-size: 26px !important;
+  &:hover {
+    color: #0e8080;
   }
 }

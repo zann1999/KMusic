@@ -6,17 +6,22 @@ import {
   faChevronRight,
   faLock,
   faUser,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef } from "react";
 const cx = className.bind(styles);
 
-function Login({ login }) {
+function Login({ login, setlogin }) {
   const inputUser = useRef();
   useEffect(() => {
     if (login) {
       inputUser.current.focus();
     } else return;
   }, [login]);
+
+  const hadlerExit = () => {
+    setlogin(false);
+  };
 
   return (
     <div className={cx("boxlogin")}>
@@ -65,6 +70,9 @@ function Login({ login }) {
         <span className={cx("backgroud4", "bkg")}></span>
         <span className={cx("backgroud1", "bkg")}></span>
       </div>
+      <button className={cx("exit")} onClick={hadlerExit}>
+        <FontAwesomeIcon className={cx("iconexit")} icon={faXmark} />
+      </button>
     </div>
   );
 }
