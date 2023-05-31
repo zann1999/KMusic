@@ -1,0 +1,125 @@
+.kmchart {
+  display: flex;
+  background-color: #ced9d9;
+  min-height: 680px;
+  position: relative;
+  margin-left: 240px;
+  padding-top: 70px;
+  z-index: 0;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  position: absolute;
+  z-index: -1;
+  background-color: rgb(206 217 217/0.9);
+}
+.wrap {
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 40px;
+
+  h1 {
+    text-transform: none;
+    color: #0f7070;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0px;
+  }
+}
+.week {
+  display: flex;
+}
+.boxweek ~ .boxweek {
+  margin-left: 24px;
+}
+.boxweek {
+  width: 376px;
+  height: 432px;
+  margin-top: 12px;
+  background-color: hsla(0, 0%, 100%, 0.5);
+  border-radius: 20px;
+  h2 {
+    color: #0f7070;
+    margin-left: 40px;
+    padding-top: 16px;
+    margin-bottom: 12px;
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 8px;
+    height: 60px;
+    border-radius: 4px;
+    margin-right: 8px;
+    h3 {
+      -webkit-text-stroke: 1.5px #32323d;
+      opacity: 0.7;
+      font-family: Inter;
+      font-size: 32px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1;
+      width: 32px;
+      letter-spacing: normal;
+      text-align: center;
+      color: transparent;
+      font-family: "Roboto", sans-serif;
+    }
+    .line {
+      color: #8b8b8f;
+      font-size: 40px;
+      font-weight: 100;
+      margin-left: 12px;
+    }
+    .time {
+      color: #8b8b8f;
+      font-weight: 400;
+      padding: 0 12px 0 36px;
+    }
+  }
+}
+.item:hover {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  .time {
+    display: none;
+  }
+  .user {
+    max-width: 290px;
+  }
+}
+.user {
+  max-width: 210px;
+  overflow: hidden;
+}
+.wrapall {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 24px;
+
+  .all {
+    padding: 8px 24px;
+    border: #0f7070 1px solid;
+    border-radius: 20px;
+    color: #0f7070;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+      background-color: hsla(0, 0%, 100%, 0.3);
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .kmchart {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+}

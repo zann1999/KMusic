@@ -9,9 +9,8 @@ const cx = classNames.bind(styles);
 function Home() {
   return (
     <div className={cx("home")}>
-      <NavBar></NavBar>
       <Content></Content>
-      <PlayMusic></PlayMusic>
+
       <Notification></Notification>
     </div>
   );

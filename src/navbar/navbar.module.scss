@@ -1,6 +1,6 @@
 .navbar {
   background-color: #dde4e4;
-
+  z-index: 10;
   height: calc(100vh - 90px);
   width: 240px;
   position: fixed;
@@ -97,4 +97,8 @@
       padding-left: 12px;
     }
   }
+}
+a {
+  text-decoration: none !important;
+  color: #000000;
 }

@@ -7,11 +7,11 @@ import Tippy from "@tippyjs/react/headless";
 import "tippy.js/dist/tippy.css"; // optional
 const cx = classNames.bind(styles);
 
-function HotRadio() {
+function HotRadio(radioClass, titleClass) {
   return (
     <div className={cx("wrap")}>
-      <h1>Radio Nổi Bật</h1>
-      <div className={cx("radio")}>
+      <h1 className={cx({ titleClass })}>Radio Nổi Bật</h1>
+      <div className={cx("radio", { radioClass })}>
         <div>
           <div className={cx("boxradio")}>
             <div className={cx("itemradio")}>

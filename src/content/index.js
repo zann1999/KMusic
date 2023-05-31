@@ -8,7 +8,6 @@ const cx = classNames.bind(styles);
 function Content() {
   return (
     <div className={cx("content")}>
-      <Header></Header>
       <HomeContent></HomeContent>
     </div>
   );

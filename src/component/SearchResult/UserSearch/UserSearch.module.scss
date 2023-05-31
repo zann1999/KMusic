@@ -39,6 +39,7 @@
   .option {
     display: none;
     position: absolute;
+
     right: 24px;
     border: none;
 
@@ -62,8 +63,9 @@
 .user:hover {
   background-color: #e9f1f1;
   cursor: pointer;
-  & .option {
-    display: block;
+  .option {
+    display: flex !important;
+    align-items: center;
   }
   &::before {
     display: block;
@@ -100,13 +102,10 @@
     height: 64px;
     border-radius: 8px;
     &:hover {
-      opacity: 1;
+      opacity: 0.9;
     }
   }
 
-  & .option {
-    display: block;
-  }
   &::before {
     display: none;
   }
@@ -125,6 +124,8 @@
   }
   .option {
     color: black;
+    display: flex !important;
+    align-items: center;
     & :first-child {
       margin: 0;
       padding: 6px;
@@ -151,4 +152,12 @@
       display: none;
     }
   }
+}
+.topmusic {
+  img {
+    height: 40px;
+    width: 40px;
+  }
+  display: flex;
+  margin-top: 12px;
 }

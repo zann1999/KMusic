@@ -6,13 +6,14 @@ import { faGem, faHeart } from "@fortawesome/free-regular-svg-icons";
 import Tippy from "@tippyjs/react/headless";
 
 import "tippy.js/dist/tippy.css"; // optional
+import LikeButton from "../../liked";
 const cx = classNames.bind(styles);
 
-function UserSearch({ children, cl, data, sound }) {
+function UserSearch({ children, cl, data, sound, topmusic }) {
   return (
     <>
       {cl && sound ? (
-        <div className={cx("user", { cl })}>
+        <div className={cx("user", { cl }, { topmusic })}>
           <img src={sound.avatar} alt="photo"></img>
           <div>
             <h4>{sound.name}</h4>
@@ -26,7 +27,8 @@ function UserSearch({ children, cl, data, sound }) {
                 </div>
               )}
             >
-              <FontAwesomeIcon icon={faHeart} />
+              <LikeButton />
+              {/* <FontAwesomeIcon icon={faHeart} /> */}
             </Tippy>
             <Tippy
               render={(attrs) => (
@@ -57,7 +59,8 @@ function UserSearch({ children, cl, data, sound }) {
                     </div>
                   )}
                 >
-                  <FontAwesomeIcon icon={faHeart} />
+                  <LikeButton />
+                  {/* <FontAwesomeIcon icon={faHeart} /> */}
                 </Tippy>
                 <Tippy
                   render={(attrs) => (

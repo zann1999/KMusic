@@ -290,16 +290,18 @@ function PlayMusic() {
           <div
             className={cx("timebox")}
             onMouseMove={(e) => {
-              if ((e.clientX - 512) / 488 > 0 && (e.clientX - 512) / 488 < 1) {
-                setcolorbox((e.clientX - 512) / 488);
+              if (e.clientX - 548 > 0) {
+                console.log(e.clientX);
+                setcolorbox((e.clientX - 548) / 488);
               } else {
                 return;
               }
             }}
             onClick={(e) => {
-              if ((e.clientX - 512) / 488 > 0 && (e.clientX - 512) / 488 < 1) {
+              console.log(e.clientX);
+              if ((e.clientX - 546) / 488 > 0 && (e.clientX - 546) / 488 < 1) {
                 setTimeload(
-                  (((e.clientX - 512) / 488) * totaltime - 8).toFixed(0)
+                  (((e.clientX - 546) / 488) * totaltime - 2).toFixed(0)
                 );
               } else {
                 return;
@@ -321,19 +323,21 @@ function PlayMusic() {
                 tabindex="0"
                 aria-valuemax="211.176"
                 aria-valuemin="0"
-                aria-valuenow={
-                  colorbox == timenow
-                    ? (timenow / totaltime) * 211.176
-                    : colorbox * 211.176
-                }
+                aria-valuenow={(timenow / totaltime) * 211.176}
                 draggable="false"
                 role="slider"
                 style={{
                   transform: `translate(${
-                    colorbox == timenow
-                      ? (timenow / totaltime) * 488
-                      : colorbox * 488 - 8
+                    (timenow / totaltime) * 488
                   }px, -4px)`,
+                }}
+              ></div>
+              <div
+                className={cx("subline")}
+                style={{
+                  background: `linear-gradient( to right, #81b9b9 0%, #81b9b9 ${
+                    colorbox * 100
+                  }%,transparent ${colorbox * 100}%,  transparent 100% )`,
                 }}
               ></div>
             </div>
@@ -423,3 +427,4 @@ function PlayMusic() {
 }
 
 export default PlayMusic;
+export { listSound };

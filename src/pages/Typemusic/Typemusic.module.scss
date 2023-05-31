@@ -1,0 +1,41 @@
+.Typemusic {
+  display: flex;
+  background-color: #ced9d9;
+  min-height: 100vh;
+  padding-top: 160px;
+  padding-left: 30vw;
+}
+.dflex {
+  display: flex;
+  padding: 16px 24px 24px 24px;
+
+  img {
+    margin-left: 48px;
+  }
+}
+.formalerts .formwarning {
+  border-radius: 11px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-right: 48px;
+  background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.35) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0.35) 75%,
+        transparent 75%
+      )
+      left/20px 20px repeat,
+    #c0d8d8;
+  border-color: #0e8080;
+}
+@media (max-width: 1000px) {
+  .Typemusic {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
