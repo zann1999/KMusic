@@ -30,11 +30,16 @@
 }
 .week {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 24px;
 }
 .boxweek ~ .boxweek {
-  margin-left: 24px;
+  margin-left: 16px;
 }
+
 .boxweek {
+  margin-bottom: 24px;
   width: 376px;
   height: 432px;
   margin-top: 12px;
@@ -116,10 +121,22 @@
     }
   }
 }
-@media (max-width: 1000px) {
-  .kmchart {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+
+@media (max-width: 1350px) {
+  .boxweek {
+    width: 60vw;
+    .item {
+      justify-content: left;
+      position: relative;
+      &:hover {
+        .user {
+          overflow: inherit;
+        }
+      }
+    }
+    .time {
+      position: absolute;
+      right: 12px;
+    }
   }
 }

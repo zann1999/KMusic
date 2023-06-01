@@ -37,7 +37,7 @@ function Radio() {
               <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r16x9_webp/banner/a/1/1/0/a110a3cf4fee745f20be4b04d9fbfa4a.jpg"></img>
             </div>
           </div>
-          <div className={cx("itemPodcast")}>
+          <div className={cx("itemPodcast", "hide")}>
             <div className={cx("wrapimg")}>
               <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r16x9_webp/banner/a/1/1/0/a110a3cf4fee745f20be4b04d9fbfa4a.jpg"></img>
             </div>

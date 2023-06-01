@@ -37,6 +37,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>
@@ -49,6 +50,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>
@@ -61,6 +63,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>
@@ -73,6 +76,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>
@@ -85,6 +89,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>
@@ -106,6 +111,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>
@@ -118,6 +124,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>
@@ -130,6 +137,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>
@@ -142,6 +150,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>
@@ -154,6 +163,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>
@@ -175,6 +185,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>
@@ -187,6 +198,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>
@@ -199,6 +211,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>
@@ -211,6 +224,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>
@@ -223,6 +237,7 @@ function Kmchart() {
                   cl={"infosong"}
                   topmusic={"topmusic"}
                   sound={singer}
+                  clx={"marginx"}
                 />
               </div>
               <h5 className={cx("time")}>04:44</h5>

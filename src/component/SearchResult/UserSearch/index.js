@@ -9,11 +9,14 @@ import "tippy.js/dist/tippy.css"; // optional
 import LikeButton from "../../liked";
 const cx = classNames.bind(styles);
 
-function UserSearch({ children, cl, data, sound, topmusic }) {
+function UserSearch({ children, cl, data, sound, topmusic, clx }) {
   return (
     <>
       {cl && sound ? (
-        <div id={sound.idd} className={cx("user", { cl }, { topmusic })}>
+        <div
+          id={sound.idd}
+          className={cx("user", { cl }, { topmusic }, { clx })}
+        >
           <img src={sound.avatar} alt="photo"></img>
           <div>
             <h4>{sound.name}</h4>
