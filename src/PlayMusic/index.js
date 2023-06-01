@@ -25,12 +25,15 @@ import {
   faWindowRestore,
 } from "@fortawesome/free-regular-svg-icons";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import Profile from "../pages/Profile";
+// import { Numbersong } from "../pages/Profile";
 
 const cx = classNames.bind(styles);
 
 //
 const listSound = [
   {
+    idd: 1,
     music: soud1,
     avatar:
       "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_webp/cover/2/d/5/c/2d5cc8bc9f930ce292c464e929ea31fb.jpg",
@@ -38,6 +41,8 @@ const listSound = [
     singger: "Tăng Duy Tân, ...",
   },
   {
+    idd: 2,
+
     music: soud2,
     avatar:
       "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_webp/cover/0/5/1/a/051a297c016cf26e33c9b48f45d0977d.jpg",
@@ -45,6 +50,8 @@ const listSound = [
     singger: "Hoàng Thùy Linh, Đen Vâu",
   },
   {
+    idd: 3,
+
     music: soud3,
     avatar:
       "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_webp/cover/a/e/1/3/ae13967d58cc06b3a9feaa42a9563e3d.jpg",
@@ -53,7 +60,8 @@ const listSound = [
   },
 ];
 let song = 0;
-function PlayMusic() {
+
+function PlayMusic(sendnumber) {
   const [activePlay, setactivePlay] = useState("active");
   const [activePause, setactivePause] = useState("");
   const [timenow, setTimenow] = useState(0);
@@ -67,6 +75,8 @@ function PlayMusic() {
   const [random, setrandom] = useState(false);
 
   const [sound, setsound] = useState(listSound[song]);
+
+  // const [numbersong, setNumbersong] = useState(0);
 
   //
 
@@ -208,8 +218,19 @@ function PlayMusic() {
       setrandom(false);
     }
   };
+  // send component
+  const Sendsound = () => {
+    setsound(listSound[2]);
+  };
+
   return (
     <div className={cx("playMusic")}>
+      <Profile
+        className={"none"}
+        soundid={sound.idd ? sound.idd : 1}
+        Sendsound={Sendsound}
+        audio={audio}
+      />
       <div className={cx("infoSong")}>
         <UserSearch cl={"infosong"} sound={sound} />
       </div>

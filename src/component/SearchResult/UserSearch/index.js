@@ -13,7 +13,7 @@ function UserSearch({ children, cl, data, sound, topmusic }) {
   return (
     <>
       {cl && sound ? (
-        <div className={cx("user", { cl }, { topmusic })}>
+        <div id={sound.idd} className={cx("user", { cl }, { topmusic })}>
           <img src={sound.avatar} alt="photo"></img>
           <div>
             <h4>{sound.name}</h4>

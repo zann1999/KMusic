@@ -10,12 +10,36 @@ import {
   faPlay,
 } from "@fortawesome/free-solid-svg-icons";
 import LikeButton from "../../component/liked";
+import { useEffect, useLayoutEffect, useState, useMemo } from "react";
+import UserSearch from "../../component/SearchResult/UserSearch";
 
 const cx = classNames.bind(styles);
 
-function Profile() {
+function Profile({ className, soundid }) {
+  const [m, setm] = useState(1);
+
+  useEffect(() => {
+    // const music1 = document.getElementById("1");
+    // setm1(music1);
+    // const music2 = document.getElementById("2");
+    // setm2(music2);
+
+    // const music3 = document.getElementById("3");
+    // setm3(music3);
+    if (soundid) {
+      setm(soundid);
+      // console.log(sound);
+    } else return;
+
+    // console.log(m1, m2, m3);
+  }, [soundid]);
+  const handle = (i) => {
+    setm(i + 1);
+    // Sendsound();
+  };
+
   return (
-    <div className={cx("profile")}>
+    <div className={cx("profile", { className })}>
       <div className={cx("option")}>
         <h1 className={cx("active")}>BÀI HÁT</h1>
         <h1>PODCAST</h1>
@@ -33,9 +57,12 @@ function Profile() {
       </div>
       <div className={cx("line")}></div>
       <div className={cx("list")}>
-        {listSound.map((item) => (
+        {listSound.map((item, index) => (
           <>
-            <div className={cx("item", "choose")}>
+            <div
+              className={cx("item", m == index + 1 ? "choose" : "")}
+              onClick={() => handle(index)}
+            >
               <FontAwesomeIcon icon={faMusic} className={cx("icon")} />
               <img src={item.avatar}></img>
               <div>

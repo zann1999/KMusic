@@ -149,6 +149,7 @@
     .cd {
       display: block;
     }
+    background-color: #afb9b9;
   }
   .subimg {
     display: none;
@@ -167,6 +168,9 @@
       top: 27%;
     }
   }
+}
+.className {
+  display: none;
 }
 @keyframes rotate {
   from {
