@@ -27,10 +27,8 @@ function Notification() {
           <h1 class={cx("alert")}>welcome!</h1>
           <p>Tôi đang truy cập bằng máy tính</p>
         </div>
-        <button class={cx("buttonbox")}>
-          <h1 class={cx("green")} onClick={() => setopen("hidebox")}>
-            let's go
-          </h1>
+        <button class={cx("buttonbox")} onClick={() => setopen("hidebox")}>
+          <h1 class={cx("green")}>let's go</h1>
         </button>
       </div>
       <div className={cx("errorbox")}>
