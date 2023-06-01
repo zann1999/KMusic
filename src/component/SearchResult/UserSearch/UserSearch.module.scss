@@ -161,8 +161,10 @@
   display: flex;
   margin-top: 12px;
 }
-.clx {
-  .option {
-    margin-right: -28vw;
+@media (max-width: 1350px) {
+  .clx {
+    .option {
+      margin-right: -28vw;
+    }
   }
 }
