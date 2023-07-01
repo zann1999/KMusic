@@ -28,7 +28,7 @@ function Profile({ className }) {
   const [Play, setplay] = context[2];
 
   //
-  const [m, setm] = useState(1);
+  const [m, setm] = useState(song + 1);
 
   const handle = (i) => {
     setm(i + 1);
