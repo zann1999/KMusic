@@ -35,6 +35,9 @@ function Profile({ className }) {
     setplay(true);
     setsong(i);
   };
+  useEffect(() => {
+    setm(song + 1);
+  }, [song]);
 
   return (
     <div className={cx("profile", { className })}>
