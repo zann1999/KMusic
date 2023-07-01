@@ -12,30 +12,28 @@ import {
 import LikeButton from "../../component/liked";
 import { useEffect, useLayoutEffect, useState, useMemo } from "react";
 import UserSearch from "../../component/SearchResult/UserSearch";
+//
+import { useContext } from "react";
+import { SingContext } from "../../global/sing";
 
 const cx = classNames.bind(styles);
 
-function Profile({ className, soundid }) {
+function Profile({ className }) {
+  //context
+  //singnumber /song
+
+  const context = useContext(SingContext);
+  const [song, setsong] = context[0];
+
+  const [Play, setplay] = context[2];
+
+  //
   const [m, setm] = useState(1);
 
-  useEffect(() => {
-    // const music1 = document.getElementById("1");
-    // setm1(music1);
-    // const music2 = document.getElementById("2");
-    // setm2(music2);
-
-    // const music3 = document.getElementById("3");
-    // setm3(music3);
-    if (soundid) {
-      setm(soundid);
-      // console.log(sound);
-    } else return;
-
-    // console.log(m1, m2, m3);
-  }, [soundid]);
   const handle = (i) => {
     setm(i + 1);
-    // Sendsound();
+    setplay(true);
+    setsong(i);
   };
 
   return (

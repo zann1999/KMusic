@@ -27,7 +27,8 @@ import {
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import Profile from "../pages/Profile";
 // import { Numbersong } from "../pages/Profile";
-
+import { useContext } from "react";
+import { SingContext } from "../global/sing";
 const cx = classNames.bind(styles);
 
 //
@@ -59,33 +60,36 @@ const listSound = [
     singger: "Trúc Nhân",
   },
 ];
-let song = 0;
 
-function PlayMusic(sendnumber) {
-  const [activePlay, setactivePlay] = useState("active");
-  const [activePause, setactivePause] = useState("");
+function PlayMusic() {
+  //singnumber /song
+
+  const context = useContext(SingContext);
+  const [song, setsong] = context[0];
+  const [sound, setsound] = context[1];
+  const [Play, setplay] = context[2];
+  const [Play2, setplay2] = context[3];
+  const [activePlay, setactivePlay] = context[4];
+  const [activePause, setactivePause] = context[5];
+  const audio = context[6];
+
+  // console.log(song);
+  //
+
   const [timenow, setTimenow] = useState(0);
   const [timeload, setTimeload] = useState(0);
   const [colorbox, setcolorbox] = useState(timenow);
-  const [Play, setplay] = useState(false);
-  const [Play2, setplay2] = useState(false);
+
   const [endded, setendded] = useState(false);
   const [rePeat, setrePeat] = useState("");
   const [buttonrandom, setbuttonRandom] = useState("");
   const [random, setrandom] = useState(false);
 
-  const [sound, setsound] = useState(listSound[song]);
-
   // const [numbersong, setNumbersong] = useState(0);
 
   //
 
-  const audio = useMemo(() => {
-    let audi = new Audio(sound.music);
-
-    return audi;
-  }, [sound]);
-  var totaltime = audio.duration;
+  let totaltime = audio.duration;
   audio.ontimeupdate = () => {
     setTimenow(audio.currentTime.toFixed(0));
     setendded(audio.ended);
@@ -100,7 +104,7 @@ function PlayMusic(sendnumber) {
       if (song != randomNumber) {
         console.log("th1");
 
-        song = randomNumber;
+        setsong(randomNumber); //
         setsound(listSound[song]);
         setplay(true);
         setplay2(song);
@@ -108,7 +112,7 @@ function PlayMusic(sendnumber) {
       }
       if (song == randomNumber && song < listSound.length - 1) {
         console.log("th2");
-        song = song + 1;
+        setsong(song + 1);
         setsound(listSound[song]);
         setplay(true);
         setplay2(song);
@@ -116,7 +120,7 @@ function PlayMusic(sendnumber) {
       } else {
         console.log("th3");
 
-        song = 0;
+        setsong(0);
         setsound(listSound[song]);
         setplay(true);
         setplay2(song);
@@ -125,10 +129,10 @@ function PlayMusic(sendnumber) {
     }
     if (!random && endded) {
       if (song < listSound.length - 1) {
-        song = song + 1;
+        setsong(song + 1);
         console.log("tiep theo");
       } else {
-        song = 0;
+        setsong(0);
         console.log("quay lai");
       }
       setsound(listSound[song]);
@@ -140,6 +144,7 @@ function PlayMusic(sendnumber) {
   useEffect(() => {
     if (Play) {
       audio.play();
+
       setactivePlay("");
       setactivePause("active");
     } else {
@@ -164,42 +169,30 @@ function PlayMusic(sendnumber) {
     audio.currentTime = timeload;
   }, [timeload]);
 
-  // const handelerPlay = () => {
-  //   audio.pause();
-  //   setactivePlay("active");
-  //   setactivePause("");
-  // };
-  // const handelerPause = () => {
-  //   audio.play();
-  //   setactivePlay("");
-  //   setactivePause("active");
-  // };
   // next
   const handelerNext = () => {
-    audio.pause();
     if (song < listSound.length - 1) {
-      song = song + 1;
+      setsong(song + 1);
     } else {
-      song = 0;
+      setsong(0);
     }
-
-    setsound(listSound[song]);
     setplay(true);
-    setplay2(song);
   };
   // back
   const handelerBack = () => {
-    audio.pause();
     if (song > 0) {
-      song = song - 1;
+      setsong(song - 1);
     } else {
-      song = listSound.length - 1;
+      setsong(listSound.length - 1);
     }
-
-    setsound(listSound[song]);
     setplay(true);
-    setplay2(song);
   };
+  // song thay doi\
+  useEffect(() => {
+    audio.pause();
+    setsound(listSound[song]);
+    setplay2(song);
+  }, [song]);
   // repeat
   const handlerrePeat = () => {
     if (rePeat == "") {
